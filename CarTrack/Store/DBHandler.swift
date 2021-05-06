@@ -20,6 +20,7 @@ class DBHandler {
             let result = try context.fetch(request)
             
             if result.count == 0 {
+                
                 completionHandler(.failure(AuthenticationError.noRecordExist))
             }
             
@@ -30,11 +31,10 @@ class DBHandler {
                 
                 if dbUserName == username && dbPassword == password {
                     completionHandler(.success(true))
-                }
-                else {
-                    completionHandler(.failure(AuthenticationError.credentialNotMatch))
+                    return
                 }
             }
+            completionHandler(.failure(AuthenticationError.credentialNotMatch))
         } catch {
             completionHandler(.failure(AuthenticationError.featchingDataFailed))
         }

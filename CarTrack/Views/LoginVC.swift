@@ -11,6 +11,7 @@ class LoginVC: UIViewController, ListPickerVCDelegate, UITextFieldDelegate {
     
     let loginVM     = LoginVM()
     let pickerView  = PickerListVC()
+    var currentTF:UITextField?
     
     // MARK: IBOutlets
     @IBOutlet weak var usernameTF: FloatingTextField!
@@ -32,10 +33,9 @@ class LoginVC: UIViewController, ListPickerVCDelegate, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        //Please uncomment this code one time when you run to store below login credentials
-        //let dbHandler = DBHandler()
-        //dbHandler.saveData(username: "car", password: "1234")
+        
+        // Added this method to save some data in local database
+        adddedSomeRecordForTesting()
         
         addGradientBG()
         loginVM.fetchCountries()
@@ -46,6 +46,17 @@ class LoginVC: UIViewController, ListPickerVCDelegate, UITextFieldDelegate {
         self.navigationController?.navigationBar.isHidden = true
     }
 
+    func adddedSomeRecordForTesting() {
+        let saveOneTime = UserDefaults.standard.value(forKey: "one_time") as? String
+        if saveOneTime == nil {
+            let dbHandler = DBHandler()
+            dbHandler.saveData(username: "car", password: "1234")
+            dbHandler.saveData(username: "abc", password: "123456")
+            dbHandler.saveData(username: "xyz", password: "12")
+            UserDefaults.standard.setValue("1", forKey: "one_time")
+        }
+    }
+    
     func addGradientBG(){
         let gradient = CAGradientLayer()
         gradient.frame = self.view.bounds
@@ -72,6 +83,7 @@ class LoginVC: UIViewController, ListPickerVCDelegate, UITextFieldDelegate {
             loginVM.userAuthentication(requestFields: request) { result in
                 switch result {
                         case .success:
+                            self.reSetExistingValues()
                             self.navigateToUsers()
                         case .failure(let authError):
                             if authError == AuthenticationError.credentialNotMatch {
@@ -96,8 +108,15 @@ class LoginVC: UIViewController, ListPickerVCDelegate, UITextFieldDelegate {
             print("unknown error at login validation")
         }
     }
+
+    func reSetExistingValues(){
+        currentTF?.resignFirstResponder()
+        self.usernameTF.text = ""
+        self.passwordTF.text = ""
+    }
     
     func navigateToUsers()  {
+        
         let vc = self.storyboard?.instantiateViewController(identifier: "UserDetailsVC")
         self.navigationController?.pushViewController(vc!, animated: false)
     }
@@ -112,7 +131,9 @@ class LoginVC: UIViewController, ListPickerVCDelegate, UITextFieldDelegate {
     // MARK: - Textfield Delegates
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        currentTF = textField
         textField.resignFirstResponder()
+        return true
     }
 
     /*
