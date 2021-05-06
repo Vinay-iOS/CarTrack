@@ -10,19 +10,16 @@ import Foundation
 class WSHandler: Service  {
     
     // hanlde get users api request and reponse here
-    func getUsersAPI(completionHandler: @escaping (UserDetail?, NetworkError?) -> Void) {
+    func getUsersAPI(requestURLStr:String, completionHandler: @escaping (UserDetail?, NetworkError?) -> Void) {
        
-        let usersRequestUrl = "https://jsonplaceholder.typicode.com/users"
-        
-        fetchDataUsingGet(requestUrl: usersRequestUrl) { data, error in
+        fetchDataUsingGet(requestUrl: requestURLStr) { data, error in
             
-            guard URL(string: usersRequestUrl) != nil else {
+            guard URL(string: requestURLStr) != nil else {
                 completionHandler(nil, .badURL)
                 return
             }
             
             guard error == nil else {
-                print("101 - ErrorCode: \(error.debugDescription)")
                 completionHandler(nil, .unknown)
                 return
             }

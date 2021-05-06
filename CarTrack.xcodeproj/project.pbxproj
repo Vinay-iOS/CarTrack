@@ -34,6 +34,8 @@
 		22DA27CF2643DFCA00C88B2B /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DA27CE2643DFCA00C88B2B /* Utils.swift */; };
 		22DA27D12643E02500C88B2B /* StaticMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DA27D02643E02500C88B2B /* StaticMessages.swift */; };
 		22DA27D32643E65D00C88B2B /* FloatingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DA27D22643E65D00C88B2B /* FloatingTextField.swift */; };
+		22DA27D52643F37000C88B2B /* LoginAuthenticationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DA27D42643F37000C88B2B /* LoginAuthenticationTests.swift */; };
+		22DA27D72644018A00C88B2B /* UserWebServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DA27D62644018A00C88B2B /* UserWebServiceTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +89,8 @@
 		22DA27CE2643DFCA00C88B2B /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		22DA27D02643E02500C88B2B /* StaticMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticMessages.swift; sourceTree = "<group>"; };
 		22DA27D22643E65D00C88B2B /* FloatingTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingTextField.swift; sourceTree = "<group>"; };
+		22DA27D42643F37000C88B2B /* LoginAuthenticationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAuthenticationTests.swift; sourceTree = "<group>"; };
+		22DA27D62644018A00C88B2B /* UserWebServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserWebServiceTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +160,8 @@
 		22B362B32643936F00C45816 /* CarTrackTests */ = {
 			isa = PBXGroup;
 			children = (
+				22DA27D42643F37000C88B2B /* LoginAuthenticationTests.swift */,
+				22DA27D62644018A00C88B2B /* UserWebServiceTest.swift */,
 				22B362B42643936F00C45816 /* CarTrackTests.swift */,
 				22B362B62643936F00C45816 /* Info.plist */,
 			);
@@ -409,6 +415,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				22B362B52643936F00C45816 /* CarTrackTests.swift in Sources */,
+				22DA27D72644018A00C88B2B /* UserWebServiceTest.swift in Sources */,
+				22DA27D52643F37000C88B2B /* LoginAuthenticationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

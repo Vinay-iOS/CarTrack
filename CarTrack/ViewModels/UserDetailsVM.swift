@@ -14,13 +14,14 @@ import CoreLocation
 class UserDetailsVM {
     
     var userArray:UserDetail?
+    let usersRequestUrl = "https://jsonplaceholder.typicode.com/users"
     
     // This method will return users array which is getting from API call
     func getUser(completionHandler: @escaping(Bool)->Void) {
         if Utils.shared.isReachable {
             
             let wsHandler = WSHandler()
-            wsHandler.getUsersAPI { userDetail, nwError in
+            wsHandler.getUsersAPI(requestURLStr: usersRequestUrl, completionHandler: { userDetail, nwError in
                 
                 if userDetail?.count ?? 0 > 0 {
                     self.userArray = userDetail
@@ -29,7 +30,7 @@ class UserDetailsVM {
                 else {
                     completionHandler(false)
                 }
-            }
+            })
         }
         else {
             completionHandler(false)

@@ -12,6 +12,12 @@ class LoginVC: UIViewController, ListPickerVCDelegate, UITextFieldDelegate {
     let loginVM     = LoginVM()
     let pickerView  = PickerListVC()
     
+    // MARK: IBOutlets
+    @IBOutlet weak var usernameTF: FloatingTextField!
+    @IBOutlet weak var passwordTF: FloatingTextField!
+    @IBOutlet weak var countryTF: UITextField!
+    @IBOutlet weak var loginBtn:UIButton!
+    @IBOutlet weak var selectCountryBtn:UIButton!
     @IBOutlet weak var animatedView:UIView!
     {
         didSet{
@@ -23,35 +29,6 @@ class LoginVC: UIViewController, ListPickerVCDelegate, UITextFieldDelegate {
             animatedView.layer.add(animation, forKey: "fade")
         }
     }
-    @IBOutlet weak var usernameTF: FloatingTextField!
-    @IBOutlet weak var passwordTF: FloatingTextField!
-//    @IBOutlet weak var usernameTF: UITextField!
-//    {
-//        didSet{
-//            updateView(imageName: "person.circle.fill", textfield: usernameTF)
-//        }
-//    }
-//    @IBOutlet weak var passwordTF: UITextField!
-//    {
-//        didSet{
-//            updateView(imageName: "lock", textfield: passwordTF)
-//        }
-//    }
-    
-    @IBOutlet weak var countryTF: UITextField!
-    @IBOutlet weak var loginBtn:UIButton!
-    @IBOutlet weak var selectCountryBtn:UIButton!
-    
-    func updateView(imageName:String, textfield:UITextField) {
-
-        textfield.leftViewMode = .always
-        let imageView = UIImageView(frame: CGRect(x: 5, y: 0, width: 60, height: 60))
-        imageView.image = UIImage(systemName: imageName)
-        imageView.tintColor = UIColor.orange
-        textfield.leftView = imageView
-        textfield.backgroundColor = UIColor.white
-        textfield.addBottomBorder()
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,7 +36,6 @@ class LoginVC: UIViewController, ListPickerVCDelegate, UITextFieldDelegate {
         //Please uncomment this code one time when you run to store below login credentials
         //let dbHandler = DBHandler()
         //dbHandler.saveData(username: "car", password: "1234")
-
         
         addGradientBG()
         loginVM.fetchCountries()
