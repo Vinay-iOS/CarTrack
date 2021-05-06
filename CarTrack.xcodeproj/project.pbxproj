@@ -25,6 +25,11 @@
 		22B362E326439B6D00C45816 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B362E226439B6D00C45816 /* ErrorHandler.swift */; };
 		22B362E526439BDD00C45816 /* PersistentStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B362E426439BDD00C45816 /* PersistentStorage.swift */; };
 		22B362E726439BEC00C45816 /* DBHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B362E626439BEC00C45816 /* DBHandler.swift */; };
+		22DA27C12643D42E00C88B2B /* UserDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DA27C02643D42E00C88B2B /* UserDetailsModel.swift */; };
+		22DA27C32643D44700C88B2B /* UserDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DA27C22643D44700C88B2B /* UserDetailsVC.swift */; };
+		22DA27C52643D45A00C88B2B /* UserDetailsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DA27C42643D45A00C88B2B /* UserDetailsVM.swift */; };
+		22DA27C72643D4D600C88B2B /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DA27C62643D4D600C88B2B /* WebServices.swift */; };
+		22DA27C92643D4E500C88B2B /* WSHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DA27C82643D4E500C88B2B /* WSHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +74,11 @@
 		22B362E226439B6D00C45816 /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		22B362E426439BDD00C45816 /* PersistentStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentStorage.swift; sourceTree = "<group>"; };
 		22B362E626439BEC00C45816 /* DBHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHandler.swift; sourceTree = "<group>"; };
+		22DA27C02643D42E00C88B2B /* UserDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsModel.swift; sourceTree = "<group>"; };
+		22DA27C22643D44700C88B2B /* UserDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsVC.swift; sourceTree = "<group>"; };
+		22DA27C42643D45A00C88B2B /* UserDetailsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsVM.swift; sourceTree = "<group>"; };
+		22DA27C62643D4D600C88B2B /* WebServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
+		22DA27C82643D4E500C88B2B /* WSHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				22B362D4264395DB00C45816 /* LoginModel.swift */,
+				22DA27C02643D42E00C88B2B /* UserDetailsModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -166,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				22B362D62643960500C45816 /* LoginVC.swift */,
+				22DA27C22643D44700C88B2B /* UserDetailsVC.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -174,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				22B362D82643961900C45816 /* LoginVM.swift */,
+				22DA27C42643D45A00C88B2B /* UserDetailsVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -201,6 +214,8 @@
 		22B362D32643958D00C45816 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				22DA27C62643D4D600C88B2B /* WebServices.swift */,
+				22DA27C82643D4E500C88B2B /* WSHandler.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -361,9 +376,14 @@
 				22B362D72643960500C45816 /* LoginVC.swift in Sources */,
 				22B362E726439BEC00C45816 /* DBHandler.swift in Sources */,
 				22B3629F2643936E00C45816 /* ViewController.swift in Sources */,
+				22DA27C52643D45A00C88B2B /* UserDetailsVM.swift in Sources */,
 				22B362E326439B6D00C45816 /* ErrorHandler.swift in Sources */,
 				22B3629B2643936E00C45816 /* AppDelegate.swift in Sources */,
+				22DA27C12643D42E00C88B2B /* UserDetailsModel.swift in Sources */,
 				22B362E526439BDD00C45816 /* PersistentStorage.swift in Sources */,
+				22DA27C92643D4E500C88B2B /* WSHandler.swift in Sources */,
+				22DA27C32643D44700C88B2B /* UserDetailsVC.swift in Sources */,
+				22DA27C72643D4D600C88B2B /* WebServices.swift in Sources */,
 				22B3629D2643936E00C45816 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -19,4 +19,7 @@ enum AuthenticationError: Error {
     case success
 }
 
+enum NetworkError: Error {
+    case badURL, requestFailed, unknown
+}
 
