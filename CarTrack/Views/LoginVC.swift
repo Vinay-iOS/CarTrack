@@ -23,18 +23,20 @@ class LoginVC: UIViewController, ListPickerVCDelegate, UITextFieldDelegate {
             animatedView.layer.add(animation, forKey: "fade")
         }
     }
-    @IBOutlet weak var usernameTF: UITextField!
-    {
-        didSet{
-            updateView(imageName: "person.circle.fill", textfield: usernameTF)
-        }
-    }
-    @IBOutlet weak var passwordTF: UITextField!
-    {
-        didSet{
-            updateView(imageName: "lock", textfield: passwordTF)
-        }
-    }
+    @IBOutlet weak var usernameTF: FloatingTextField!
+    @IBOutlet weak var passwordTF: FloatingTextField!
+//    @IBOutlet weak var usernameTF: UITextField!
+//    {
+//        didSet{
+//            updateView(imageName: "person.circle.fill", textfield: usernameTF)
+//        }
+//    }
+//    @IBOutlet weak var passwordTF: UITextField!
+//    {
+//        didSet{
+//            updateView(imageName: "lock", textfield: passwordTF)
+//        }
+//    }
     
     @IBOutlet weak var countryTF: UITextField!
     @IBOutlet weak var loginBtn:UIButton!
@@ -54,6 +56,11 @@ class LoginVC: UIViewController, ListPickerVCDelegate, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //Please uncomment this code one time when you run to store below login credentials
+        //let dbHandler = DBHandler()
+        //dbHandler.saveData(username: "car", password: "1234")
+
+        
         addGradientBG()
         loginVM.fetchCountries()
     }
@@ -114,7 +121,10 @@ class LoginVC: UIViewController, ListPickerVCDelegate, UITextFieldDelegate {
         }
     }
     
-    func navigateToUsers()  { }
+    func navigateToUsers()  {
+        let vc = self.storyboard?.instantiateViewController(identifier: "UserDetailsVC")
+        self.navigationController?.pushViewController(vc!, animated: false)
+    }
     
     
     // MARK: - Delegates

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		22B3629B2643936E00C45816 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B3629A2643936E00C45816 /* AppDelegate.swift */; };
 		22B3629D2643936E00C45816 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B3629C2643936E00C45816 /* SceneDelegate.swift */; };
-		22B3629F2643936E00C45816 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B3629E2643936E00C45816 /* ViewController.swift */; };
 		22B362A22643936E00C45816 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22B362A02643936E00C45816 /* Main.storyboard */; };
 		22B362A52643936E00C45816 /* CarTrack.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 22B362A32643936E00C45816 /* CarTrack.xcdatamodeld */; };
 		22B362A72643936F00C45816 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22B362A62643936F00C45816 /* Assets.xcassets */; };
@@ -30,6 +29,11 @@
 		22DA27C52643D45A00C88B2B /* UserDetailsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DA27C42643D45A00C88B2B /* UserDetailsVM.swift */; };
 		22DA27C72643D4D600C88B2B /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DA27C62643D4D600C88B2B /* WebServices.swift */; };
 		22DA27C92643D4E500C88B2B /* WSHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DA27C82643D4E500C88B2B /* WSHandler.swift */; };
+		22DA27CC2643DEF100C88B2B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DA27CA2643DEF100C88B2B /* MapViewController.swift */; };
+		22DA27CD2643DEF100C88B2B /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22DA27CB2643DEF100C88B2B /* MapViewController.xib */; };
+		22DA27CF2643DFCA00C88B2B /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DA27CE2643DFCA00C88B2B /* Utils.swift */; };
+		22DA27D12643E02500C88B2B /* StaticMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DA27D02643E02500C88B2B /* StaticMessages.swift */; };
+		22DA27D32643E65D00C88B2B /* FloatingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DA27D22643E65D00C88B2B /* FloatingTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,7 +57,6 @@
 		22B362972643936E00C45816 /* CarTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22B3629A2643936E00C45816 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22B3629C2643936E00C45816 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		22B3629E2643936E00C45816 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		22B362A12643936E00C45816 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		22B362A42643936E00C45816 /* CarTrack.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CarTrack.xcdatamodel; sourceTree = "<group>"; };
 		22B362A62643936F00C45816 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -79,6 +82,11 @@
 		22DA27C42643D45A00C88B2B /* UserDetailsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsVM.swift; sourceTree = "<group>"; };
 		22DA27C62643D4D600C88B2B /* WebServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
 		22DA27C82643D4E500C88B2B /* WSHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSHandler.swift; sourceTree = "<group>"; };
+		22DA27CA2643DEF100C88B2B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		22DA27CB2643DEF100C88B2B /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		22DA27CE2643DFCA00C88B2B /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		22DA27D02643E02500C88B2B /* StaticMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticMessages.swift; sourceTree = "<group>"; };
+		22DA27D22643E65D00C88B2B /* FloatingTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,7 +139,6 @@
 			children = (
 				22B3629A2643936E00C45816 /* AppDelegate.swift */,
 				22B3629C2643936E00C45816 /* SceneDelegate.swift */,
-				22B3629E2643936E00C45816 /* ViewController.swift */,
 				22B362A02643936E00C45816 /* Main.storyboard */,
 				22B362D32643958D00C45816 /* Services */,
 				22B362D22643957600C45816 /* Store */,
@@ -197,6 +204,8 @@
 				22B362DF264399DB00C45816 /* Extensions */,
 				22B362DA2643981400C45816 /* UIControls */,
 				22B362E226439B6D00C45816 /* ErrorHandler.swift */,
+				22DA27CE2643DFCA00C88B2B /* Utils.swift */,
+				22DA27D02643E02500C88B2B /* StaticMessages.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -223,8 +232,11 @@
 		22B362DA2643981400C45816 /* UIControls */ = {
 			isa = PBXGroup;
 			children = (
+				22DA27D22643E65D00C88B2B /* FloatingTextField.swift */,
 				22B362DB2643985600C45816 /* PickerListVC.swift */,
 				22B362DC2643985600C45816 /* PickerListVC.xib */,
+				22DA27CA2643DEF100C88B2B /* MapViewController.swift */,
+				22DA27CB2643DEF100C88B2B /* MapViewController.xib */,
 			);
 			path = UIControls;
 			sourceTree = "<group>";
@@ -343,6 +355,7 @@
 				22B362DE2643985600C45816 /* PickerListVC.xib in Resources */,
 				22B362AA2643936F00C45816 /* LaunchScreen.storyboard in Resources */,
 				22B362A72643936F00C45816 /* Assets.xcassets in Resources */,
+				22DA27CD2643DEF100C88B2B /* MapViewController.xib in Resources */,
 				22B362A22643936E00C45816 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -371,19 +384,22 @@
 				22B362DD2643985600C45816 /* PickerListVC.swift in Sources */,
 				22B362D92643961900C45816 /* LoginVM.swift in Sources */,
 				22B362D5264395DB00C45816 /* LoginModel.swift in Sources */,
+				22DA27D32643E65D00C88B2B /* FloatingTextField.swift in Sources */,
 				22B362A52643936E00C45816 /* CarTrack.xcdatamodeld in Sources */,
 				22B362E1264399FB00C45816 /* UIExtension.swift in Sources */,
 				22B362D72643960500C45816 /* LoginVC.swift in Sources */,
 				22B362E726439BEC00C45816 /* DBHandler.swift in Sources */,
-				22B3629F2643936E00C45816 /* ViewController.swift in Sources */,
 				22DA27C52643D45A00C88B2B /* UserDetailsVM.swift in Sources */,
 				22B362E326439B6D00C45816 /* ErrorHandler.swift in Sources */,
 				22B3629B2643936E00C45816 /* AppDelegate.swift in Sources */,
+				22DA27D12643E02500C88B2B /* StaticMessages.swift in Sources */,
 				22DA27C12643D42E00C88B2B /* UserDetailsModel.swift in Sources */,
 				22B362E526439BDD00C45816 /* PersistentStorage.swift in Sources */,
+				22DA27CC2643DEF100C88B2B /* MapViewController.swift in Sources */,
 				22DA27C92643D4E500C88B2B /* WSHandler.swift in Sources */,
 				22DA27C32643D44700C88B2B /* UserDetailsVC.swift in Sources */,
 				22DA27C72643D4D600C88B2B /* WebServices.swift in Sources */,
+				22DA27CF2643DFCA00C88B2B /* Utils.swift in Sources */,
 				22B3629D2643936E00C45816 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
